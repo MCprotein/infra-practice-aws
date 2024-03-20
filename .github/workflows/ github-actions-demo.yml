@@ -22,6 +22,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
+          role-to-assume: ${{ secrets.AWS_CICD_ROLE_ARN }}
 
       # - name: Assume AWS Role
       #   run: aws sts assume-role --role-arn arn:aws:iam::<your-account-id>:role/<your-role-name> --role-session-name GitHubActions --output json > assumed-credentials.json
