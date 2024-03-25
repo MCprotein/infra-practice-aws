@@ -37,5 +37,5 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
           # DATETIME: $(date + '%Y-%s-%dT%H:%M:%S')
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$DATETIME .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$DATETIME
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$env.DATETIME .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$env.DATETIME
