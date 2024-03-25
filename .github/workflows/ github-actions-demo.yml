@@ -20,7 +20,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_CICD_ROLE_ARN }}
-          role-sesion-name: GitHubActions
+          role-session-name: GitHubActions
           aws-region: ap-northeast-2
 
       # - name: Assume AWS Role
