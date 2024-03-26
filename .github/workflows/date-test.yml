@@ -19,6 +19,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Set Datetime
         id: datetime
-        run: echo "DATETIME=$(date + '%Y-%s-%dT%H:%M:%S')" >> %GITHUB_ENV
+        run: echo "DATETIME=$(date + '%Y-%s-%dT%H:%M:%S')" >> "$GITHUB_ENV"
       - name: echo date
-        run: echo "$DATETIME"
+        run: echo $DATETIME
