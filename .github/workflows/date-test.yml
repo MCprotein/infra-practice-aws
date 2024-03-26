@@ -17,9 +17,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Set test env
+        id: test-env
+        run: echo "NAME=john" >> "$GITHUB_ENV"
+      - name: echo name
+        run: echo "$NAME"
       - name: Set Datetime
         id: datetime
         run: echo "DATETIME=$(date + '%Y-%s-%dT%H:%M:%S')" >> "$GITHUB_ENV"
       - name: echo date
-        run: |
-          printf '%s\n' "$DATETIME"
+        run: echo "$DATETIME"
